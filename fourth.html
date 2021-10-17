@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>IV</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+                <img class="img-fluid rounded img-thumbnail" style="height: 45%; width: 45%; margin-left: 23%;" src="./imgs/second.jpg"/>   
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-5 mr-5 mt-3 text-white">
+               Już swoje przeżyłaś. Prawdopodobnie było to dla Ciebie 19 lat pełne ciężkich chwil przeplatanych miłymi epizodami. Nie mniej jednak mam nadzieję, że nie żałujesz wielu decyzji w swoim życiu i możesz
+               stwierdzić, że jesteś spełniona. Jeśli tak, to cudownie! Jak nie to właśnie tego chciałbym Ci życzyć. Żebyś w przyszłości miała jak najwięcej momentów, które będą inspirujące i 
+               oby były to chwile, które będziesz dumnie wspominać za kilkanaście lat. Oby to były chwile jak nasze schizy czy emocje/uczucia, które towarzyszyły przed tym. Wiesz o czym mówię.
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 text-white">
+                <span>
+                    <button onclick="previousPage()" type="button" class="btn btn-light btn-sm">Wstecz</button>
+                    <button onclick="nextPage()" type="button" class="btn btn-info btn-sm">Dalej</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function nextPage() {
+            window.location.replace("./fifth.html");
+        }
+
+        function previousPage() {
+            window.location.replace("./third.html");
+        }
+    </script>
+</body>
+</html> 

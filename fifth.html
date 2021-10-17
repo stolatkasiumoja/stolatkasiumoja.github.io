@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>V</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+                <img class="img-fluid rounded img-thumbnail" style="height: 45%; width: 45%; margin-left: 23%;" src="./imgs/third.jpg"/>   
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-5 mr-5 mt-3 text-white">
+                Trochę nas kosztują te studia, nawet to napisałem na początku. Jest to ciężki okres, w którym znaleźć dla siebie czas będzie graniczyło z cudem.
+                Chciałbym Ci życzyć po prostu jak najwięcej odpowiedzialności i takiej chłodnej głowy do układania sobie czasu. Mam nadzieję, że będziesz mogła spokojnie tak gospodarować czasem, żebyś
+                miała go i dla pracy, i dla obowiązków studenckich, i dla siebie na jakieś wyjścia (czy cokolwiek co Ci się ubzdura czasami 🧐), i dla snu, i też dla 
+                mnie. No i oczywiście mam nadzieję, że nie będziesz musiała ganiać już za autobusami i ja nie będę musiał na Ciebie już nigdy czekać. :)
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 text-white">
+                <span>
+                    <button onclick="previousPage()" type="button" class="btn btn-light btn-sm">Wstecz</button>
+                    <button onclick="nextPage()" type="button" class="btn btn-info btn-sm">Dalej</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function nextPage() {
+            window.location.replace("./sixth.html");
+        }
+
+        function previousPage() {
+            window.location.replace("./fourth.html");
+        }
+    </script>
+</body>
+</html> 

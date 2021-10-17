@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>III</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+                <img class="img-fluid rounded img-thumbnail mx-auto" src="./imgs/pierwsze.jpg"/>   
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-5 mr-5 mt-3 text-white">
+                Sto lat! Sorra, wiem, że nie dawałem znaku. Żyję, wszystko gra, Nowy Sącz czy Kraków? <br/> Skorzystam teraz z chwili Twojej uwagi. Chciałbym przekazać, że naprawdę jestem potężnie zakochany w Tobie,
+                a co na to się składa, to przejęcie tym czasem. Wiem jak bardzo męczące są dla Ciebie te studia, boo siedzę teraz za Tobą
+                i piszę ten fragment. (14.10.2021 23:09) <br/>
+                Chciałbym po prostu przekazać potężny wirtualny support w tych słowach i również chciałbym dodać, że jestem totalnie 
+                skłonny do każdej możliwej pomocy, czy to do nauki czy to do czegokolwiek innego. 
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 text-white">
+                <span>
+                    <button onclick="previousPage()" type="button" class="btn btn-light btn-sm">Wstecz</button>
+                    <button onclick="nextPage()" type="button" class="btn btn-info btn-sm">Dalej</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function nextPage() {
+            window.location.replace("./fourth.html");
+        }
+
+        function previousPage() {
+            window.location.replace("./second.html");
+        }
+    </script>
+</body>
+</html> 

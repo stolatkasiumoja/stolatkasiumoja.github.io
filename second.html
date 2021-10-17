@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>II</title>
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-4">
+                <img class="img-fluid" src= "./imgs/frame.png"/>   
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-4 mr-5 mt-3 text-white">
+                Zagrajmy w gre! <b>Dosłownie.</b> </br>
+                Zeskanuj kod QR i pobierz grę, żeby przejść do faktycznych życzeń. Jest jedno ultimatum. Musisz zrobić wynik minimum 20pkt żeby się wyświetlił kod. <br/>
+                Mam nadzieję, że sobie poradzisz i zaraz na dole wpiszesz kod aktywacyjny. <br/>
+                <b>Powodzenia!</b>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-5 ml-5 mt-5 text-white">
+                <input type="text" class="col-10 bg-transparent text-center text-white" id="code" placeholder="Kod aktywacyjny">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 mt-2 ml-4 text-white">
+                <span>
+                    <button onclick="previousPage()" type="button" class="btn btn-light btn-sm">Wstecz</button>
+                    <button onclick="validateCode()" type="button" class="btn btn-info btn-sm">Dalej</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function validateCode() {
+            let code = document.getElementById("code").value;
+            if(code == "WYJDZ_ZA_MNIE") {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Gratulacje!',   
+                    text: 'Koniec zabawy, teraz przejdźmy do konkretów...',
+                    confirmButtonText: "Życzenia, czas start!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                            window.location.replace("./third.html");
+                        }
+                    })
+            }
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Oszuście, co to za niepoprawny kod?',
+                    confirmButtonText: 'Popraw się!',
+                    confirmButtonColor: 'rgba(0,0,0,1)'
+                });
+            }
+        }
+
+        function previousPage() {
+            window.location.replace("./index.html");
+        }
+    </script>
+</body>
+</html> 

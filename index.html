@@ -1,0 +1,86 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>I</title>
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-6">
+                    <div class="row justify-content-center">
+                        <input type="text" class="col-8 bg-transparent text-center text-white" id="password" placeholder="Data poczatku wszystkiego (ddmmrrrr)">
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <input type="password" class="col-5 bg-transparent text-center text-white" id="code" placeholder="Kod aktywacyjny">
+                    </div>
+                    <div class="row mt-1 justify-content-center">
+                        <button onclick="validateDate()" type="button" class="btn btn-light btn-sm">Dalej</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="./sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script>
+        var invalidEnteranceAmount = 0;
+        function validateDate() { 
+            let input = document.getElementById("password");
+            let code = document.getElementById("code");
+            if(input.value == "04052020" && code.value == "r6xbnPhfanYVLZ")
+            {   
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Bingo!',   
+                    text: 'Jeszcze jedno...',
+                    confirmButtonText: 'Przejdź dalej'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                            window.location.replace("./second.html");
+                        }
+                    })
+            }
+            else
+            {
+                invalidEnteranceAmount++;
+                switch (invalidEnteranceAmount) {
+                    case 3:
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Trzy razy się pomylić, co jest nie tak z Tobą?',
+                            confirmButtonText: 'Popraw się!',
+                            confirmButtonColor: 'rgba(0,0,0,1)'
+                        });
+                        break;
+
+                    case 5:
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'To już przesada...',
+                            text: '5 razy? Nawet nie próbuj więcej.',
+                            confirmButtonText: 'Wstyd!',
+                            confirmButtonColor: 'rgba(0,0,0,1)'
+                        });
+                        break;
+                
+                    
+                    default:
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Niepoprawny kod',
+                            text: 'Nie pamiętasz, naprawdę? Przykro mi...',
+                            confirmButtonText: 'Jeszcze raz!',
+                            confirmButtonColor: 'rgba(0,0,0,1)'
+                        });
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+</html> 

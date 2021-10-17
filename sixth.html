@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>VI</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-6">
+                <img class="img-fluid rounded img-thumbnail" style="height: 45%; width: 45%; margin-left: 23%;" src="./imgs/fourth.jpg"/>   
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-5 mr-5 mt-3 text-white">
+                Pozostało mi chyba tylko życzyć Ci zdrowia. Psychicznego i fizycznego, po prostu obyś się nie zajechała na tych studiach z przemęczenia. 
+                Mam nadzieję, że wszystko czego Ci życzę otrzymasz i będziesz miała z tego jakiś użytek. Teraz pozostało tylko rozpakować dalszą część prezentu i świętować ten dzień.
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 text-white">
+                <span>
+                    <button onclick="previousPage()" type="button" class="btn btn-light btn-sm">Wstecz</button>
+                    <button onclick="nextPage()" type="button" class="btn btn-info btn-sm">Koniec</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function nextPage() {
+            window.location.replace("./final.html");
+        }
+
+        function previousPage() {
+            window.location.replace("./fifth.html");
+        }
+    </script>
+</body>
+</html> 
